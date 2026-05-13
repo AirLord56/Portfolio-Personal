@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Aitor García Montalbán - Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <img src="./images/104533254.png" alt="Foto de perfil de Aitor García Montalbán">
+        <h1>Aitor García Montalbán</h1>
+        <p>Desarrollador en formación | Estudiante de tecnología</p>
+    </header>
+    <button id="theme-toggle" aria-label="Cambiar tema">
+        <span class="theme-icon">☀️</span>
+    </button>
+    <nav>
+        <ul>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#habilidades">Habilidades laborales</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#estudios">Formación</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-label">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <label for="menu-toggle" class="menu-overlay"></label>
+    <aside class="mobile-menu">
+        <ul>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#habilidades">Habilidades laborales</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#estudios">Formación</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <section id="sobre-mi">
+            <h2>Sobre mí</h2>
+            <p>Hola, soy Aitor García Montalbán. Tengo 18 años y me apasiona la tecnología. Actualmente estoy cursando
+                1º de Desarrollo de Aplicaciones Multiplataforma (DAM) y estoy aprendiendo nuevas tecnologías y
+                adentrandome en el mundo del desarrollo de software.
+                Me considero una persona curiosa y siempre dispuesta a enfrentar nuevos retos técnicos.
+            </p>
+            <p>He completado un Grado Medio en Sistemas Microinformáticos y Redes, lo que me ha dado una base sólida en
+                infraestructura tecnológica. Ahora estoy ampliando mis conocimientos en desarrollo de software con Java,
+                HTML, CSS, JavaScript y bases de datos con MariaDB.</p>
+        </section>
+
+        <section id="habilidades">
+            <h2>Habilidades laborales</h2>
+            <ul>
+                <li>
+                    <!-- Si, los iconos los he puesto yo porque me gustan, no es IA.-->
+                    <span class="icono">🌐</span>
+                    <span class="habilidad-texto">Desarrollo Frontend (HTML, CSS, JavaScript)</span>
+                </li>
+                <li>
+                    <span class="icono">☕</span>
+                    <span class="habilidad-texto">Programación en Java</span>
+                </li>
+                <li>
+                    <span class="icono">🗄️</span>
+                    <span class="habilidad-texto">Bases de datos (MariaDB)</span>
+                </li>
+                <li>
+                    <span class="icono">💻</span>
+                    <span class="habilidad-texto">Entornos de desarrollo (IDEs)</span>
+                </li>
+                <li>
+                    <span class="icono">🖥️</span>
+                    <span class="habilidad-texto">Sistemas Microinformáticos y Redes</span>
+                </li>
+                <li>
+                    <span class="icono">📦</span>
+                    <span class="habilidad-texto">Control de versiones (Git & GitHub)</span>
+                </li>
+                <li>
+                    <span class="icono">🔧</span>
+                    <span class="habilidad-texto">Resolución de problemas técnicos</span>
+                </li>
+                <li>
+                    <span class="icono">👥</span>
+                    <span class="habilidad-texto">Trabajo en equipo y responsable</span>
+                </li>
+            </ul>
+        </section>
+
+        <section id="proyectos">
+            <h2>Proyectos</h2>
+            <article>
+                <h3>Página de GitHub</h3>
+                <p>Mi perfil en GitHub</p>
+                <a href="https://github.com/AirLord56">Ver proyecto</a>
+            </article>
+            <article>
+                <h3>Página de Fuentes</h3>
+                <p>Mi página de fuentes, donde puedes cambiar el estilo de tu letra</p>
+                <a href="https://github.com/AirLord56/Fontspage">Ver proyecto</a>
+            </article>
+            <article>
+                <h3>Portfolio Personal</h3>
+                <p>Mi portfolio personal, donde muestro mis proyectos y habilidades</p>
+                <a href="#">Ver proyecto</a>
+            </article>
+        </section>
+
+        <section id="estudios">
+            <h2>Formación Académica</h2>
+            <button id="btn-nuevo-estudio" class="btn-add">+ Añadir Estudio</button>
+
+            <!-- Formulario oculto para añadir estudios -->
+            <div id="form-estudio" class="form-container" style="display: none;">
+                <h3>Nuevo Estudio</h3>
+                <form id="form-nuevo-estudio">
+                    <label for="year-inicio">Año Inicio:</label>
+                    <input type="text" id="year-inicio" required placeholder="2020">
+
+                    <label for="year-fin">Año Fin:</label>
+                    <input type="text" id="year-fin" required placeholder="2022">
+
+                    <label for="titulo">Título:</label>
+                    <input type="text" id="titulo" required placeholder="Nombre del estudio">
+
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion" rows="3" required placeholder="Breve descripción del estudio"></textarea>
+
+                    <div class="form-buttons">
+                        <button type="submit" class="btn-aceptar">Aceptar</button>
+                        <button type="button" id="btn-cancelar" class="btn-cancelar">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="timeline-container" class="timeline">
+                <!-- Los estudios se cargarán aquí -->
+            </div>
+        </section>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form action="#" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="asunto">Asunto:</label>
+                <input type="text" id="asunto" name="asunto" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Aitor García Montalbán. Todos los derechos reservados.</p>
+        <p>Hecho con &hearts; por Aitor García Montalbán</p>
+    </footer>
+    <script src="/js/cambiarTema.js"></script>
+    <script src="/js/anadirEstudio.js"></script>
+</body>
+
+</html>

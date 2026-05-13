@@ -1,0 +1,608 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables de colores para modo oscuro */
+:root {
+  --color-bg: #0a0a0a;
+  --color-bg-secondary: #1a1a1a;
+  --color-bg-tertiary: #2a1a2e;
+  --color-primary: #ff1493;
+  --color-secondary: #ff69b4;
+  --color-accent: #ff006e;
+  --color-text: #ffffff;
+  --color-text-secondary: #b8b8b8;
+  --color-border: rgba(255, 20, 147, 0.3);
+  --color-shadow: rgba(0, 0, 0, 0.5);
+}
+
+/* Variables para modo claro */
+body.light-mode {
+  --color-bg: #e8e8e8;
+  --color-bg-secondary: #f0f0f0;
+  --color-bg-tertiary: #d8d8d8;
+  --color-text: #2a2a2a;
+  --color-text-secondary: #5a5a5a;
+  --color-shadow: rgba(0, 0, 0, 0.15);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: var(--color-bg-secondary);
+  text-align: center;
+  padding: 3rem 2rem;
+  border-bottom: 3px solid var(--color-primary);
+}
+
+header img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+}
+
+/* Navegación */
+nav {
+  background-color: var(--color-bg-secondary);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  display: block;
+  padding: 1rem 1.5rem;
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: var(--color-primary);
+}
+
+/* Elementos de menú móvil ocultos por defecto */
+#menu-toggle, .menu-label, .mobile-menu, .menu-overlay {
+  display: none;
+}
+
+/* Main y secciones */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background-color: var(--color-bg-secondary);
+  border-radius: 10px;
+  border: 2px solid var(--color-border);
+}
+
+section h2 {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-bottom: 3px solid var(--color-primary);
+  padding-bottom: 0.5rem;
+}
+
+/* Sobre mí */
+#sobre-mi p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--color-text-secondary);
+  text-align: justify;
+}
+
+/* Habilidades con iconos */
+#habilidades ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 0;
+}
+
+#habilidades li {
+  background-color: var(--color-bg-tertiary);
+  padding: 1rem;
+  border-radius: 5px;
+  border-left: 4px solid var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#habilidades li:hover {
+  background-color: var(--color-bg);
+}
+
+#habilidades .icono {
+  font-size: 2rem;
+  min-width: 40px;
+  text-align: center;
+}
+
+#habilidades .habilidad-texto {
+  flex: 1;
+}
+
+/* Proyectos */
+#proyectos {
+  padding: 2rem;
+}
+
+#proyectos > article {
+  background-color: var(--color-bg-tertiary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 2px solid var(--color-border);
+  margin-bottom: 1.5rem;
+}
+
+#proyectos article h3 {
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+  margin-bottom: 0.5rem;
+}
+
+#proyectos article p {
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+}
+
+#proyectos article a {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+#proyectos article a:hover {
+  background-color: var(--color-secondary);
+}
+
+/* Estudios timeline */
+#estudios .timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.estudio {
+  background-color: var(--color-bg-tertiary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border-left: 4px solid var(--color-primary);
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.estudio:hover {
+  background-color: var(--color-bg);
+  border-left-color: var(--color-secondary);
+}
+
+.estudio-year {
+  font-weight: bold;
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  min-width: 120px;
+}
+
+.estudio-content {
+  flex: 1;
+}
+
+.estudio-content h3 {
+  font-size: 1.3rem;
+  color: var(--color-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.estudio-content p {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* Botón añadir estudio */
+.btn-add {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 auto 1.5rem;
+  display: block;
+}
+
+.btn-add:hover {
+  background-color: var(--color-secondary);
+}
+
+/* Formulario para añadir estudios */
+.form-container {
+  background-color: var(--color-bg-tertiary);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 2px solid var(--color-primary);
+  margin: 0 auto 2rem;
+  max-width: 600px;
+}
+
+.form-container h3 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.form-container label {
+  display: block;
+  color: var(--color-secondary);
+  font-weight: bold;
+  margin: 0.8rem 0 0.3rem;
+}
+
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: var(--color-bg);
+  border: 2px solid var(--color-border);
+  border-radius: 5px;
+  color: var(--color-text);
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.form-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.btn-aceptar, .btn-cancelar {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-aceptar {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+.btn-aceptar:hover {
+  background-color: var(--color-secondary);
+}
+
+.btn-cancelar {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  border: 2px solid var(--color-border);
+}
+
+.btn-cancelar:hover {
+  background-color: var(--color-bg-tertiary);
+}
+
+/* Formulario de contacto */
+#contacto form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#contacto label {
+  font-size: 1rem;
+  color: var(--color-secondary);
+  font-weight: bold;
+}
+
+#contacto input,
+#contacto textarea {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: var(--color-bg);
+  border: 2px solid var(--color-border);
+  border-radius: 5px;
+  color: var(--color-text);
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+#contacto input:focus,
+#contacto textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+#contacto textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+#contacto button {
+  padding: 1rem 2rem;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: center;
+}
+
+#contacto button:hover {
+  background-color: var(--color-secondary);
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-bg-secondary);
+  text-align: center;
+  padding: 2rem;
+  border-top: 3px solid var(--color-primary);
+  margin-top: 3rem;
+}
+
+footer p {
+  color: var(--color-text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+footer p:last-child {
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+/* Botón de cambio de tema */
+#theme-toggle {
+  position: fixed;
+  right: 1.5rem;
+  top: 1.5rem;
+  z-index: 2000;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-bg-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#theme-toggle:hover {
+  background-color: var(--color-primary);
+  transform: scale(1.1);
+}
+
+.theme-icon {
+  font-size: 1.5rem;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  #proyectos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  #proyectos > h2 {
+    grid-column: 1 / -1;
+  }
+
+  #proyectos > article {
+    margin-bottom: 0;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  header h1 {
+    font-size: 3rem;
+  }
+
+  #proyectos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Móvil */
+@media (max-width: 767px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header img {
+    width: 100px;
+    height: 100px;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  section {
+    padding: 1.5rem;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Ocultar navegación normal */
+  nav {
+    display: none;
+  }
+
+  /* Botón hamburguesa circular flotante */
+  .menu-label {
+    display: flex;
+    cursor: pointer;
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+    z-index: 2000;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .menu-label span {
+    display: block;
+    width: 22px;
+    height: 3px;
+    background-color: var(--color-text);
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+
+  /* Menú lateral izquierdo */
+  .mobile-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100vh;
+    background-color: var(--color-bg-secondary);
+    z-index: 1500;
+    transition: left 0.3s;
+    overflow-y: auto;
+    padding-top: 4rem;
+    border-right: 3px solid var(--color-primary);
+  }
+
+  #menu-toggle:checked ~ .mobile-menu {
+    left: 0;
+  }
+
+  .mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobile-menu li {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .mobile-menu a {
+    display: block;
+    padding: 1.2rem 1.5rem;
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .mobile-menu a:hover {
+    background-color: var(--color-primary);
+  }
+
+  /* Overlay oscuro */
+  .menu-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1400;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  #menu-toggle:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Ajustes estudios */
+  .estudio {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .estudio-year {
+    min-width: auto;
+  }
+
+  /* Ajustes botón tema */
+  #theme-toggle {
+    right: 1rem;
+    top: 1rem;
+    width: 45px;
+    height: 45px;
+  }
+
+  .theme-icon {
+    font-size: 1.3rem;
+  }
+}
