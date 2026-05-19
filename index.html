@@ -1,16 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
     <title>Aitor García Montalbán - Portfolio</title>
 </head>
 
 <body>
     <header>
-        <img src="./images/104533254.png" alt="Foto de perfil de Aitor García Montalbán">
+        <img src="./images/104533254.png" alt="Foto de perfil de Aitor García Montalbán" />
         <h1>Aitor García Montalbán</h1>
         <p>Desarrollador en formación | Estudiante de tecnología</p>
     </header>
@@ -20,6 +20,7 @@
     <nav>
         <ul>
             <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#github">GitHub</a></li>
             <li><a href="#habilidades">Habilidades laborales</a></li>
             <li><a href="#proyectos">Proyectos</a></li>
             <li><a href="#estudios">Formación</a></li>
@@ -27,7 +28,7 @@
         </ul>
     </nav>
 
-    <input type="checkbox" id="menu-toggle">
+    <input type="checkbox" id="menu-toggle" />
     <label for="menu-toggle" class="menu-label">
         <span></span>
         <span></span>
@@ -37,6 +38,7 @@
     <aside class="mobile-menu">
         <ul>
             <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#github">GitHub</a></li>
             <li><a href="#habilidades">Habilidades laborales</a></li>
             <li><a href="#proyectos">Proyectos</a></li>
             <li><a href="#estudios">Formación</a></li>
@@ -47,14 +49,32 @@
     <main>
         <section id="sobre-mi">
             <h2>Sobre mí</h2>
-            <p>Hola, soy Aitor García Montalbán. Tengo 18 años y me apasiona la tecnología. Actualmente estoy cursando
-                1º de Desarrollo de Aplicaciones Multiplataforma (DAM) y estoy aprendiendo nuevas tecnologías y
-                adentrandome en el mundo del desarrollo de software.
-                Me considero una persona curiosa y siempre dispuesta a enfrentar nuevos retos técnicos.
+            <p>
+                Hola, soy Aitor García Montalbán. Tengo 18 años y me apasiona la
+                tecnología. Actualmente estoy cursando 1º de Desarrollo de
+                Aplicaciones Multiplataforma (DAM) y estoy aprendiendo nuevas
+                tecnologías y adentrandome en el mundo del desarrollo de software. Me
+                considero una persona curiosa y siempre dispuesta a enfrentar nuevos
+                retos técnicos.
             </p>
-            <p>He completado un Grado Medio en Sistemas Microinformáticos y Redes, lo que me ha dado una base sólida en
-                infraestructura tecnológica. Ahora estoy ampliando mis conocimientos en desarrollo de software con Java,
-                HTML, CSS, JavaScript y bases de datos con MariaDB.</p>
+            <p>
+                He completado un Grado Medio en Sistemas Microinformáticos y Redes, lo
+                que me ha dado una base sólida en infraestructura tecnológica. Ahora
+                estoy ampliando mis conocimientos en desarrollo de software con Java,
+                HTML, CSS, JavaScript y bases de datos con MariaDB.
+            </p>
+        </section>
+
+        <section id="github">
+            <h2>Mi GitHub</h2>
+            <div id="github-profile" class="github-profile">
+                <p style="text-align: center; color: var(--color-text-secondary)">
+                    Cargando información de GitHub...
+                </p>
+            </div>
+            <div id="github-repos" class="github-repos">
+                <!-- Aqui van los repos -->
+            </div>
         </section>
 
         <section id="habilidades">
@@ -105,12 +125,16 @@
             </article>
             <article>
                 <h3>Página de Fuentes</h3>
-                <p>Mi página de fuentes, donde puedes cambiar el estilo de tu letra</p>
+                <p>
+                    Mi página de fuentes, donde puedes cambiar el estilo de tu letra
+                </p>
                 <a href="https://github.com/AirLord56/Fontspage">Ver proyecto</a>
             </article>
             <article>
                 <h3>Portfolio Personal</h3>
-                <p>Mi portfolio personal, donde muestro mis proyectos y habilidades</p>
+                <p>
+                    Mi portfolio personal, donde muestro mis proyectos y habilidades
+                </p>
                 <a href="#">Ver proyecto</a>
             </article>
         </section>
@@ -120,24 +144,26 @@
             <button id="btn-nuevo-estudio" class="btn-add">+ Añadir Estudio</button>
 
             <!-- Formulario oculto para añadir estudios -->
-            <div id="form-estudio" class="form-container" style="display: none;">
+            <div id="form-estudio" class="form-container" style="display: none">
                 <h3>Nuevo Estudio</h3>
                 <form id="form-nuevo-estudio">
                     <label for="year-inicio">Año Inicio:</label>
-                    <input type="text" id="year-inicio" required placeholder="2020">
+                    <input type="text" id="year-inicio" required placeholder="2020" />
 
                     <label for="year-fin">Año Fin:</label>
-                    <input type="text" id="year-fin" required placeholder="2022">
+                    <input type="text" id="year-fin" required placeholder="2022" />
 
                     <label for="titulo">Título:</label>
-                    <input type="text" id="titulo" required placeholder="Nombre del estudio">
+                    <input type="text" id="titulo" required placeholder="Nombre del estudio" />
 
                     <label for="descripcion">Descripción:</label>
                     <textarea id="descripcion" rows="3" required placeholder="Breve descripción del estudio"></textarea>
 
                     <div class="form-buttons">
                         <button type="submit" class="btn-aceptar">Aceptar</button>
-                        <button type="button" id="btn-cancelar" class="btn-cancelar">Cancelar</button>
+                        <button type="button" id="btn-cancelar" class="btn-cancelar">
+                            Cancelar
+                        </button>
                     </div>
                 </form>
             </div>
@@ -150,13 +176,13 @@
             <h2>Contacto</h2>
             <form action="#" method="post">
                 <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
+                <input type="text" id="nombre" name="nombre" required />
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required />
 
                 <label for="asunto">Asunto:</label>
-                <input type="text" id="asunto" name="asunto" required>
+                <input type="text" id="asunto" name="asunto" required />
 
                 <label for="mensaje">Mensaje:</label>
                 <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
@@ -170,6 +196,7 @@
         <p>&copy; 2025 Aitor García Montalbán. Todos los derechos reservados.</p>
         <p>Hecho con &hearts; por Aitor García Montalbán</p>
     </footer>
+    <script src="/js/github.js"></script>
     <script src="/js/cambiarTema.js"></script>
     <script src="/js/anadirEstudio.js"></script>
 </body>
